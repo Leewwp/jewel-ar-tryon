@@ -1,0 +1,23 @@
+{
+  "appid": "touristappid",
+  "cloudfunctionRoot": "cloudfunctions/",
+  "compileType": "miniprogram",
+  "condition": {},
+  "description": "AR 首饰试戴微信小程序技术 PoC",
+  "libVersion": "trial",
+  "miniprogramRoot": "miniprogram/",
+  "packOptions": {
+    "ignore": [],
+    "include": []
+  },
+  "projectname": "jewel-ar-tryon",
+  "setting": {
+    "coverView": true,
+    "enhance": true,
+    "es6": true,
+    "ignoreUploadUnusedFiles": true,
+    "minified": true,
+    "postcss": true,
+    "showShadowRootInWxmlPanel": true
+  }
+}

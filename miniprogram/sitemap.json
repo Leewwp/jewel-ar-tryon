@@ -1,0 +1,13 @@
+{
+  "desc": "PoC 阶段只允许首页被索引",
+  "rules": [
+    {
+      "action": "allow",
+      "page": "pages/home/index"
+    },
+    {
+      "action": "disallow",
+      "page": "*"
+    }
+  ]
+}

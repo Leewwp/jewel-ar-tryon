@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta
+      name="description"
+      content="AR 首饰试戴微信小程序的开发验收预览，不运行真实微信 AR API。"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&amp;family=IBM+Plex+Sans:wght@400;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>试戴选品 · UI 验收预览</title>
+  </head>
+  <body>
+    <header class="nav-edge" aria-label="主导航">
+      <a class="wordmark" href="#catalogue">试戴选品</a>
+      <a class="nav-action" href="#technical-status">技术状态 →</a>
+    </header>
+
+    <main>
+      <section class="intro" aria-labelledby="page-title">
+        <div class="intro__copy">
+          <p class="inventory-line">5 个试戴样品 · Demo 数据</p>
+          <h1 id="page-title">先看细节，再戴上看看。</h1>
+          <p class="intro__body">
+            查看材质、克重和真实尺寸；试戴入口只验证流程，不代表 AR 已接入。
+          </p>
+        </div>
+        <aside class="intro__note" id="technical-status">
+          <strong>技术状态</strong>
+          <span>商品流程已初始化</span>
+          <span>VisionKit 与 three.js 待真机接入</span>
+        </aside>
+      </section>
+
+      <section class="catalogue" id="catalogue" aria-labelledby="catalogue-title">
+        <div class="category-rail" role="group" aria-label="按佩戴品类筛选"></div>
+        <div class="catalogue__heading">
+          <h2 id="catalogue-title">当前样品</h2>
+          <span class="catalogue__count" aria-live="polite"></span>
+        </div>
+        <div class="product-grid"></div>
+      </section>
+    </main>
+
+    <footer class="foot-line">
+      <p>Jewel AR Try-on · 技术 PoC · 不处理交易</p>
+    </footer>
+
+    <dialog class="product-dialog" aria-labelledby="dialog-title">
+      <button class="dialog-close" type="button" aria-label="关闭商品详情">关闭</button>
+      <div class="dialog-media" aria-hidden="true"><span></span></div>
+      <p class="dialog-category"></p>
+      <h2 id="dialog-title"></h2>
+      <p class="dialog-description"></p>
+      <dl class="dialog-specs"></dl>
+      <div class="tryon-status" aria-live="polite">
+        浏览器预览只检查交互。真实 AR 需要微信真机环境。
+      </div>
+      <button class="tryon-button" type="button" data-state="default">开始试戴检查</button>
+    </dialog>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
