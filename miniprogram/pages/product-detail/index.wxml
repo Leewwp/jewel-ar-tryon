@@ -1,0 +1,41 @@
+<view wx:if="{{product}}" class="page-shell detail-page">
+  <view class="detail-media product-media--{{product.visualTone}}">
+    <view class="detail-mark"></view>
+    <text>商品图片待商家上传</text>
+  </view>
+
+  <view class="detail-heading">
+    <text class="detail-category">{{categoryLabel}} · Demo 商品</text>
+    <text class="detail-title">{{product.name}}</text>
+    <text class="detail-price">{{product.priceLabel}}</text>
+  </view>
+
+  <view class="spec-list">
+    <view class="spec-row">
+      <text>材质</text>
+      <text>{{product.material}}</text>
+    </view>
+    <view class="spec-row">
+      <text>克重</text>
+      <text>{{product.weightGrams}} g</text>
+    </view>
+    <view class="spec-row">
+      <text>真实尺寸</text>
+      <text>{{product.dimensionsMm}}</text>
+    </view>
+    <view class="spec-row">
+      <text>商家</text>
+      <text>{{product.merchantName}}</text>
+    </view>
+  </view>
+
+  <view class="detail-copy">
+    <text>{{product.description}}</text>
+    <text class="detail-caveat">当前商品没有真实图片或 3D 模型，试戴页只演示技术状态。</text>
+  </view>
+
+  <view class="sticky-action">
+    <text>查看设备是否支持 VisionKit</text>
+    <button class="action-button" bindtap="startTryOn">打开试戴</button>
+  </view>
+</view>

@@ -1,0 +1,31 @@
+<view class="page-shell tryon-page">
+  <view class="tryon-stage">
+    <view class="target-ring target-ring--outer"></view>
+    <view class="target-ring target-ring--inner"></view>
+    <text class="stage-label">{{categoryLabel}}锚点预览</text>
+  </view>
+
+  <view class="tryon-copy">
+    <text class="tryon-title">先确认设备能力。</text>
+    <text>此页面不会伪造 AR 效果。真实摄像头、关键点和模型渲染将在有效 AppID 与真机环境中接入。</text>
+  </view>
+
+  <view class="status-panel status-panel--{{capabilityState}}" aria-live="polite">
+    <text>{{statusText}}</text>
+  </view>
+
+  <button
+    class="action-button capability-button"
+    loading="{{capabilityState === 'loading'}}"
+    disabled="{{capabilityState === 'loading'}}"
+    bindtap="checkCapability"
+  >
+    检查设备支持
+  </button>
+
+  <view class="integration-list">
+    <view><text>01</text><text>VisionKit 品类追踪参数</text><text>待接入</text></view>
+    <view><text>02</text><text>three.js 模型加载与释放</text><text>待接入</text></view>
+    <view><text>03</text><text>尺寸校准与正反判定</text><text>已有纯逻辑测试</text></view>
+  </view>
+</view>

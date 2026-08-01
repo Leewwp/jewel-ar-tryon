@@ -1,0 +1,22 @@
+{
+  "name": "jewel-ar-tryon",
+  "version": "0.1.0",
+  "private": true,
+  "description": "AR 首饰试戴微信小程序技术 PoC",
+  "scripts": {
+    "check": "npm run lint && npm run format:check && npm test && npm run validate",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "lint": "eslint .",
+    "preview": "node scripts/preview-server.mjs",
+    "test": "node --test tests/*.test.js",
+    "validate": "node scripts/validate-project.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "eslint": "^9.39.1",
+    "prettier": "^3.6.2"
+  }
+}

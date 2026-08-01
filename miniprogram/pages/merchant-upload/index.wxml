@@ -1,0 +1,78 @@
+<view class="page-shell merchant-page">
+  <view class="merchant-heading">
+    <text class="merchant-title">录入一件试戴商品。</text>
+    <text>真实尺寸用于模型校准；生成式模型尺寸不能替代商家填写。</text>
+  </view>
+
+  <view class="form-field">
+    <text class="field-label">商品名称</text>
+    <input
+      class="text-input"
+      data-field="name"
+      value="{{draft.name}}"
+      placeholder="例如：素链 42 cm"
+      bindinput="onFieldInput"
+    />
+    <text class="field-help">使用商家实际商品名称。</text>
+  </view>
+
+  <view class="form-field">
+    <text class="field-label">佩戴品类</text>
+    <picker range="{{categories}}" range-key="label" value="{{categoryIndex}}" bindchange="onCategoryChange">
+      <view class="picker-input">{{categories[categoryIndex].label}} <text>选择 →</text></view>
+    </picker>
+    <text class="field-help">戒指不在首期范围。</text>
+  </view>
+
+  <view class="form-field">
+    <text class="field-label">材质或成分</text>
+    <input
+      class="text-input"
+      data-field="material"
+      value="{{draft.material}}"
+      placeholder="例如：18K 金"
+      bindinput="onFieldInput"
+    />
+    <text class="field-help">不要使用无法核验的营销描述。</text>
+  </view>
+
+  <view class="form-row">
+    <view class="form-field">
+      <text class="field-label">克重（g）</text>
+      <input
+        class="text-input"
+        data-field="weightGrams"
+        value="{{draft.weightGrams}}"
+        type="digit"
+        placeholder="3.2"
+        bindinput="onFieldInput"
+      />
+      <text class="field-help">填写实际称重。</text>
+    </view>
+    <view class="form-field">
+      <text class="field-label">真实尺寸</text>
+      <input
+        class="text-input"
+        data-field="dimensionsMm"
+        value="{{draft.dimensionsMm}}"
+        placeholder="链长 420 mm"
+        bindinput="onFieldInput"
+      />
+      <text class="field-help">包含毫米单位。</text>
+    </view>
+  </view>
+
+  <view class="form-field">
+    <text class="field-label">3D 模型</text>
+    <button class="secondary-button model-button" bindtap="chooseModel">
+      {{draft.modelPath || '选择 GLB / glTF 文件'}}
+    </button>
+    <text class="field-help">PoC 只在本机选择，不会上传。</text>
+  </view>
+
+  <view class="feedback feedback--{{feedbackState}}" aria-live="polite">
+    <text>{{feedbackText}}</text>
+  </view>
+
+  <button class="action-button save-button" bindtap="saveDraft">校验本地草稿</button>
+</view>

@@ -1,0 +1,60 @@
+<view class="page-shell home-page">
+  <view class="nav-edge">
+    <text class="wordmark">试戴选品</text>
+    <button class="nav-action" bindtap="openMerchantUpload">商家录入</button>
+  </view>
+
+  <view class="intro">
+    <view class="intro-copy">
+      <text class="inventory-line">5 个试戴样品 · Demo 数据</text>
+      <text class="intro-title">先看细节，再戴上看看。</text>
+      <text class="intro-body">查看材质、克重和真实尺寸；试戴入口只验证流程，不代表 AR 已接入。</text>
+    </view>
+    <view class="intro-note">
+      <text class="intro-note-title">技术状态</text>
+      <text>商品流程已初始化</text>
+      <text>VisionKit 与 three.js 待真机接入</text>
+    </view>
+  </view>
+
+  <scroll-view class="category-scroll" scroll-x enable-flex show-scrollbar="false">
+    <view class="category-rail">
+      <button
+        wx:for="{{categories}}"
+        wx:key="id"
+        class="category-chip {{selectedCategory === item.id ? 'category-chip--active' : ''}}"
+        data-category="{{item.id}}"
+        bindtap="onCategoryTap"
+      >
+        {{item.label}}
+      </button>
+    </view>
+  </scroll-view>
+
+  <view class="catalog-heading">
+    <text class="catalog-title">当前样品</text>
+    <text class="catalog-count">{{visibleProducts.length}} 件</text>
+  </view>
+
+  <view class="product-grid">
+    <button
+      wx:for="{{visibleProducts}}"
+      wx:key="id"
+      class="product-card"
+      data-id="{{item.id}}"
+      bindtap="openProduct"
+    >
+      <view class="product-media product-media--{{item.visualTone}}">
+        <view class="product-mark"></view>
+        <text class="media-note">图片待商家上传</text>
+      </view>
+      <view class="product-meta">
+        <view>
+          <text class="product-name">{{item.name}}</text>
+          <text class="product-material">{{item.material}} · {{item.weightGrams}} g</text>
+        </view>
+        <text class="product-link">查看并试戴 →</text>
+      </view>
+    </button>
+  </view>
+</view>

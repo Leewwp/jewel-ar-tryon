@@ -1,0 +1,42 @@
+/* Hallmark · genre: editorial · macrostructure: Catalogue · theme: Atelier · anchor hue: warm gold */
+page {
+  --color-paper: oklch(97% 0.018 82);
+  --color-paper-2: oklch(93% 0.024 82);
+  --color-paper-3: oklch(88% 0.032 82);
+  --color-ink: oklch(21% 0.025 58);
+  --color-ink-2: oklch(34% 0.026 62);
+  --color-neutral: oklch(46% 0.025 68);
+  --color-muted: oklch(40% 0.022 70);
+  --color-rule: oklch(78% 0.025 78);
+  --color-rule-strong: oklch(58% 0.04 75);
+  --color-accent: oklch(48% 0.12 72);
+  --color-accent-ink: oklch(97% 0.018 82);
+  --color-focus: oklch(37% 0.13 65);
+  --color-success: oklch(43% 0.11 145);
+  --color-success-surface: oklch(93% 0.03 145);
+  --color-error: oklch(46% 0.17 25);
+  --color-error-surface: oklch(93% 0.03 25);
+  --color-backdrop: oklch(21% 0.025 58 / 0.55);
+  --color-transparent: transparent;
+
+  --font-display: 'Songti SC', 'Noto Serif CJK SC', serif;
+  --font-body: 'PingFang SC', 'Noto Sans CJK SC', sans-serif;
+
+  --space-2xs: 8rpx;
+  --space-xs: 16rpx;
+  --space-sm: 24rpx;
+  --space-md: 32rpx;
+  --space-lg: 48rpx;
+  --space-xl: 80rpx;
+  --space-2xl: 128rpx;
+
+  --text-sm: 24rpx;
+  --text-base: 30rpx;
+  --text-md: 36rpx;
+  --text-lg: 44rpx;
+  --text-xl: 56rpx;
+
+  --rule-hair: 1rpx;
+  --radius-sm: 8rpx;
+  --radius-md: 16rpx;
+}

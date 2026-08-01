@@ -1,0 +1,80 @@
+/* Hallmark · genre: editorial · macrostructure: Catalogue · theme: Atelier · anchor hue: warm gold */
+@import './styles/tokens.wxss';
+
+page {
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  line-height: 1.6;
+}
+
+button,
+input,
+picker,
+textarea {
+  font: inherit;
+}
+
+button::after {
+  border: 0;
+}
+
+.page-shell {
+  box-sizing: border-box;
+  min-height: 100%;
+  padding: var(--space-md);
+  padding-bottom: calc(var(--space-2xl) + env(safe-area-inset-bottom));
+}
+
+.wordmark {
+  font-family: var(--font-display);
+  font-size: var(--text-md);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.action-button,
+.secondary-button {
+  align-items: center;
+  border-radius: var(--radius-sm);
+  box-sizing: border-box;
+  display: flex;
+  font-size: var(--text-sm);
+  justify-content: center;
+  line-height: 1;
+  margin: 0;
+  min-height: 88rpx;
+  padding: 0 var(--space-md);
+  white-space: nowrap;
+}
+
+.action-button {
+  background: var(--color-ink);
+  color: var(--color-paper);
+}
+
+.secondary-button {
+  background: var(--color-transparent);
+  border: var(--rule-hair) solid var(--color-rule-strong);
+  color: var(--color-ink);
+}
+
+.action-button[disabled],
+.secondary-button[disabled] {
+  opacity: 0.5;
+}
+
+.feedback {
+  border-top: var(--rule-hair) solid var(--color-rule);
+  margin-top: var(--space-md);
+  padding-top: var(--space-sm);
+}
+
+.feedback--error {
+  color: var(--color-error);
+}
+
+.feedback--success {
+  color: var(--color-success);
+}

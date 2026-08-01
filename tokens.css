@@ -1,0 +1,64 @@
+/* Hallmark · genre: editorial · macrostructure: Catalogue · theme: Atelier · enrichment: none · nav: N9 · footer: Ft2 · pre-emit critique: P5 H4 E4 S5 R5 V4 · contrast: pass (40–41) · slop: pass (42–45) · honest: pass (46) · chrome: pass (47) · tokens: pass (48) · responsive: pass (49) · icons: pass (30) · mobile: pass (34, 49, 50–57) */
+:root {
+  --color-paper: oklch(97% 0.018 82);
+  --color-paper-2: oklch(93% 0.024 82);
+  --color-paper-3: oklch(88% 0.032 82);
+  --color-ink: oklch(21% 0.025 58);
+  --color-ink-2: oklch(34% 0.026 62);
+  --color-neutral: oklch(46% 0.025 68);
+  --color-muted: oklch(40% 0.022 70);
+  --color-rule: oklch(78% 0.025 78);
+  --color-rule-strong: oklch(58% 0.04 75);
+  --color-accent: oklch(48% 0.12 72);
+  --color-accent-ink: oklch(97% 0.018 82);
+  --color-focus: oklch(37% 0.13 65);
+  --color-success: oklch(43% 0.11 145);
+  --color-success-surface: oklch(93% 0.03 145);
+  --color-error: oklch(46% 0.17 25);
+  --color-error-surface: oklch(93% 0.03 25);
+  --color-backdrop: oklch(21% 0.025 58 / 0.55);
+  --color-transparent: transparent;
+
+  --font-display: 'Cormorant Garamond', 'Songti SC', serif;
+  --font-body: 'IBM Plex Sans', 'PingFang SC', sans-serif;
+
+  --space-3xs: 0.125rem;
+  --space-2xs: 0.25rem;
+  --space-xs: 0.5rem;
+  --space-sm: 0.75rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2.5rem;
+  --space-2xl: 4rem;
+  --space-3xl: 6rem;
+  --space-4xl: 9rem;
+
+  --text-xs: 0.64rem;
+  --text-sm: 0.8rem;
+  --text-base: 1rem;
+  --text-md: 1.25rem;
+  --text-lg: 1.5625rem;
+  --text-xl: 1.9531rem;
+  --text-2xl: 2.4414rem;
+  --text-3xl: 3.0518rem;
+  --text-display: clamp(2.75rem, 5vw + 1rem, 5.25rem);
+
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in: cubic-bezier(0.7, 0, 0.84, 0);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-micro: 120ms;
+  --dur-short: 220ms;
+  --dur-long: 420ms;
+
+  --rule-hair: 1px;
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+
+  --z-base: 1;
+  --z-raised: 10;
+  --z-dropdown: 100;
+  --z-sticky: 200;
+  --z-modal: 400;
+  --z-toast: 500;
+  --z-tooltip: 600;
+}

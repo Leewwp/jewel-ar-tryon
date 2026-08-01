@@ -1,0 +1,23 @@
+{
+  "pages": [
+    "pages/home/index",
+    "pages/product-detail/index",
+    "pages/try-on/index",
+    "pages/merchant-upload/index"
+  ],
+  "window": {
+    "backgroundColor": "#f7f2e8",
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#f7f2e8",
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "试戴选品"
+  },
+  "permission": {
+    "scope.camera": {
+      "desc": "用于 AR 试戴时识别首饰佩戴位置"
+    }
+  },
+  "lazyCodeLoading": "requiredComponents",
+  "sitemapLocation": "sitemap.json",
+  "style": "v2"
+}
